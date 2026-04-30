@@ -1,0 +1,5 @@
+.env
+.venv
+.adk
+
+node_modules/
