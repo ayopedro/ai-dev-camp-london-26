@@ -1,12 +1,12 @@
 import { FunctionTool, LlmAgent } from '@google/adk';
 import { z } from 'zod';
-import { mathsAgent } from './maths_agent/agent.js';
-import { biologyAgent } from './biology_agent/agent.js';
-import { chemistryAgent } from './chemistry_agent/agent.js';
-import { computerScienceAgent } from './comp_sci_agent/agent.js';
-import { geographyAgent } from './geography_agent/agent.js';
-import { historyAgent } from './history_agent/agent.js';
-import { physicsAgent } from './physics_agent/agent.js';
+import { mathsAgent } from './sub-agents/maths_agent/agent.js';
+import { biologyAgent } from './sub-agents/biology_agent/agent.js';
+import { chemistryAgent } from './sub-agents/chemistry_agent/agent.js';
+import { computerScienceAgent } from './sub-agents/comp_sci_agent/agent.js';
+import { geographyAgent } from './sub-agents/geography_agent/agent.js';
+import { historyAgent } from './sub-agents/history_agent/agent.js';
+import { physicsAgent } from './sub-agents/physics_agent/agent.js';
 
 const respondTool = new FunctionTool({
   name: 'respond',
