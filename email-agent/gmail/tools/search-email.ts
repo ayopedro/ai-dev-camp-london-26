@@ -3,7 +3,7 @@ import { z } from "zod";
 import { getGmailService } from "../gmail-service";
 
 export const searchEmailTool = new FunctionTool({
-    name: "search_email",
+    name: "gmail_search_email",
     description: "Searches for emails in the user's inbox.",
     parameters: z.object({
         query: z.string().describe("Search query"),

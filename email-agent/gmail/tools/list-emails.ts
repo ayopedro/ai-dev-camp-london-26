@@ -3,7 +3,7 @@ import { z } from "zod";
 import { getGmailService } from "../gmail-service";
 
 export const listEmailTool = new FunctionTool({
-    name: "list_email",
+    name: "gmail_list_emails",
     description: "Retrieves a list of emails from the user's inbox.",
     parameters: z.object({
         limit: z.number().default(10).describe("Maximum number of emails to retrieve.")

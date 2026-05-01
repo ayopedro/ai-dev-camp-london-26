@@ -15,7 +15,7 @@ function getBody(payload: any): string {
 }
 
 export const readEmailTool = new FunctionTool({
-    name: "read_email",
+    name: "gmail_read_email",
     description: "Reads an email from the user's inbox.",
     parameters: z.object({
         id: z.string().describe("Email ID"),

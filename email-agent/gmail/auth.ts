@@ -13,18 +13,22 @@ const TOKEN_PATH = path.join(process.cwd(), "token.json");
 const CRED_PATH = path.join(process.cwd(), "credentials.json");
 
 export async function getAuthorizedClient() {
-    let client;
+    const content = await fs.readFile(CRED_PATH, "utf-8");
+    const credentials = JSON.parse(content);
+    const { client_secret, client_id, redirect_uris } = credentials.installed || credentials.web;
+    
+    const oAuth2Client = new google.auth.OAuth2(
+        client_id,
+        client_secret,
+        redirect_uris[0]
+    );
 
     try {
         const token = await fs.readFile(TOKEN_PATH, "utf-8");
-        const credentials = JSON.parse(token);
-
-        client = new google.auth.OAuth2();
-        client.setCredentials(credentials);
-
-        return client;
+        oAuth2Client.setCredentials(JSON.parse(token));
+        return oAuth2Client;
     } catch {
-        client = await authenticate({
+        const client = await authenticate({
             scopes: SCOPES,
             keyfilePath: CRED_PATH,
         });
