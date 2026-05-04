@@ -3,7 +3,7 @@ import { listEmailTool } from "./tools/list-emails";
 import { sendEmailTool } from "./tools/send-email";
 import { searchEmailTool } from "./tools/search-email";
 import { readEmailTool } from "./tools/read-email";
-
+import { checkAuthTool } from "./tools/check-auth";
 import { memoryTool } from "./tools/memory";
 
 export const gmailAgent = new LlmAgent({
@@ -13,6 +13,9 @@ export const gmailAgent = new LlmAgent({
     instruction: `
     You are Lara, an expert email assistant. 
     Your goal is to help the user manage their inbox with a friendly, conversational tone.
+
+    AUTHENTICATION:
+    - Use 'gmail_check_connection' to verify you are logged in if you suspect a connection issue.
 
     MEMORY:
     - Use the 'manage_memory' tool to save or lookup nicknames (e.g., 'wife' -> email address).
@@ -28,5 +31,5 @@ export const gmailAgent = new LlmAgent({
 
     Keep your prose responses short and professional.
     `,
-    tools: [listEmailTool, sendEmailTool, searchEmailTool, readEmailTool, memoryTool]
+    tools: [listEmailTool, sendEmailTool, searchEmailTool, readEmailTool, checkAuthTool, memoryTool]
 })
