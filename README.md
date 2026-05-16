@@ -7,6 +7,7 @@ This repository contains various agentic AI projects built during the Google AI 
 - **[Email Agent](./email-agent)**: A multi-agent executive assistant named Lara that manages Gmail workflows using ADK.
 - **[School Multi-Agent](./school-multi-agent-a2a)**: A collaborative multi-agent system designed for educational administrative tasks.
 - **[MCP Agent Demo](./mcp-agent-demo)**: Experiments and demonstrations of Model Context Protocol (MCP) agents.
+- **[Health Agent](./health-agent)**: A multi-agent health coach orchestrator with specialized sub-agents for nutrition, recipes, and fitness tracking.
 
 ## 🛠 Tech Stack
 - **Google ADK**: Agent Development Kit for building powerful AI agents.
