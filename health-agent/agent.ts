@@ -9,7 +9,7 @@ dotenv.config();
 
 export const rootAgent = new LlmAgent({
   name: 'health_agent',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-3.1-flash-lite',
   description: 'Provides health related information by orchestrating specialized agents.',
   instruction: `You are a friendly Health Coach orchestrator.
 

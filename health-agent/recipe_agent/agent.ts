@@ -3,7 +3,7 @@ import { sharedToolset } from "../shared/toolset.js";
 
 export const recipeAgent = new LlmAgent({
     name: 'recipe_agent',
-    model: 'gemini-2.5-flash',
+    model: 'gemini-3.1-flash-lite',
     description: 'Specialist for generating healthy recipes, meal plans, ingredient swaps, and cooking ideas.',
     instruction: `
     You are a healthy culinary chef.

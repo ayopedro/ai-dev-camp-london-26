@@ -2,10 +2,10 @@ import { LlmAgent } from "@google/adk";
 import { sharedToolset } from "../shared/toolset.js";
 
 export const stepAgent = new LlmAgent({
-    name: 'step_agent',
-    model: 'gemini-2.5-flash',
-    description: 'Specialist for tracking physical activity, step counts, walking metrics, and active progress.',
-    instruction: `
+  name: 'step_agent',
+  model: 'gemini-3.1-flash-lite',
+  description: 'Specialist for tracking physical activity, step counts, walking metrics, and active progress.',
+  instruction: `
     You are a fitness tracker.
 
     Use MCP tool:
@@ -29,5 +29,5 @@ export const stepAgent = new LlmAgent({
     User: "How many steps have I done today?"
     Action: call manage_steps with action="get"
     `,
-    tools: [sharedToolset],
+  tools: [sharedToolset],
 });

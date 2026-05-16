@@ -3,7 +3,7 @@ import { sharedToolset } from "../shared/toolset";
 
 export const calorieAgent = new LlmAgent({
     name: 'calorie_agent',
-    model: 'gemini-2.5-flash',
+    model: 'gemini-3.1-flash-lite',
     description: 'Specialist for calculating calories, nutrition profiles, food energy, and macro breakdowns.',
     instruction: `
     You are a nutritionist assistant.
